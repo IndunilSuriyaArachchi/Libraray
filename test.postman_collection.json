@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "6936480a-87a3-46ac-80be-4ec8e3476311",
+		"name": "prontoSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29037089"
+	},
+	"item": [
+		{
+			"name": "BooksListAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/books/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BooksFilterByTitle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/books/filterbybook/nopp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books",
+						"filterbybook",
+						"nopp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookSave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ4eXoiLCJleHAiOjE2OTE2NzkxOTMsImlhdCI6MTY5MTY2MTE5MywiUFJJVklMRUdFUyI6IlNUQUZGIn0.0a7UUMxw9YE_p0Qryhu_zhbu5rmP_wdKU4eVeQLDHYgs0w3JiHCSpPHul5WJ6H146TJj8nhe5vVZLxeBPY2Vcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"category\": \"test118\",\r\n        \"isbn\": \"sb118\",\r\n        \"title\": \"r444\",\r\n        \"description\": \"desc11\",\r\n        \"available\":\"2\",\r\n        \"authors\": [{\r\n        \"id\": 1,\r\n        \"authorName\": \"auht1\"\r\n        }]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/books/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthorSave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE2OTE2MTc3OTIsImlhdCI6MTY5MTU5OTc5MiwiUFJJVklMRUdFUyI6IkFETUlOIn0.l9k9WZYVvwDp8ohA_2k74dyF9o7eLq0199D-ftrDUsAlKtNPmAnRRu96hVe144OXBRnXkWo0FRXxnOza8I8Kjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"authorName\": \"auht1\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authors/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authors",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthorList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/authors/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authors",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthorFilterByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/authors/filter/auht1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authors",
+						"filter",
+						"auht1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/users/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserSave",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"abc\",\r\n    \"passWord\": \"123\",\r\n    \"joinedDate\": null,\r\n    \"firstName\": \"test\",\r\n    \"lastName\": \"lname\",\r\n    \"userType\": \"student\",\r\n    \"dob\": null,\r\n    \"role\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoanSave",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"user\": {\r\n            \"userId\": 1\r\n        },\r\n        \"book\": {\r\n            \"id\": 1\r\n        },\r\n        \"borrowDate\": \"2023-07-31T18:30:00.000+00:00\",\r\n        \"returnDate\": null,\r\n        \"fineAmount\": 0.0,\r\n        \"pending\": true\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/loans/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"loans",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoanList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/loans/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"loans",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoanFilteractiveuserloan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/loans/filteractiveuserloan/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"loans",
+						"filteractiveuserloan",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoanFilterbyuser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/loans/filterbyuser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"loans",
+						"filterbyuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoanFilteractiveloan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/loans/filteractiveloan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"loans",
+						"filteractiveloan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserAuthentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"username\": \"abc\",\r\n        \"password\": \"123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BooksFilterByAuthor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE2OTE2MjA3MzAsImlhdCI6MTY5MTYwMjczMCwiUFJJVklMRUdFUyI6Ik1FTUJFUiJ9.x6gC1VkBLIt_mwQIAHRkV0_jEIFGDuhs5qOTzTFh6TzYLOj7td3amzp_0kgQ060dYCzI_K22KjjNvLvMwdc6dQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/books/filterbyauthor/auht1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books",
+						"filterbyauthor",
+						"auht1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
